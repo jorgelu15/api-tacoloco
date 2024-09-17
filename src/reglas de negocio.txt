@@ -1,0 +1,97 @@
+****Inventario****
+
+Ingredientes
+	Nombre
+	medida
+	cantidad
+	costo
+	categoria
+
+Platos
+	Nombre
+	Ingredientes
+	Costo
+	Precio
+	Cantidad
+
+Pedido
+	Cajero
+	Cliente
+	Domicilio
+	Direccion
+	Platosg
+	Valor
+	Fecha  venta
+	
+Empleado
+	Nombre
+	Cedula
+	
+Cliente
+	Nombre
+	Correo Electronico
+
+Entrantes
+	Ingrediente
+	Cantidad
+	Fecha entrada
+
+Salientes
+	Ingrediente
+	Cantidad
+	Fecha salida
+
+Stock	
+	Ingrediente
+	Cantidad actual
+
+Funciones
+	Calcular cuantos platos salen con la cantidad de ingredientes que hay en stock
+	Calcular cual es el plato mas vendido
+	Calcular cual es el plato menos vendido
+	Calcular que dia se vendio mas
+	Calcular cuanto ingreso hubo por dia, semana y mes
+	Calcular cuanta utilidad hubo por dia, semana y mes
+
+Reglas
+	No se puede vender sino hay la cantidad de ingredientes en stock suficientes para armar un plato
+	No se puede vender sino hay un cajero autenticado
+	Los entrantes tiene un  fecha que indica el dia en que entraron los ingredientes
+	Los salientes tiene un  fecha que indica el dia en que salieron  los ingredientes
+	Un cajero puede hacer multiples ventas
+	
+	
+
+
+1. Inventario (Ingredientes y Stock)
+Incluiría:
+Gestión de Stock (por ejemplo, verificar y actualizar el stock en entradas/salidas de ingredientes)
+Ingredientes (gestión de ingredientes, cantidades, costos y categorías)
+2. Platos
+Esta característica maneja:
+Gestión de Platos (gestión de platos, cálculo de costos/precios, cantidades)
+Requisitos de Ingredientes (seguimiento del uso de ingredientes para cada plato)
+3. Ventas (Pedidos)
+Abarca:
+Procesamiento de Pedidos (cajero, cliente, domicilio, etc.)
+Platos en Pedidos (gestión de los platos incluidos en cada pedido y sus costos/cantidades)
+Cálculos (plato más/menos vendido, ingresos y utilidades diarias, semanales y mensuales)
+4. Empleados (Cajeros)
+Maneja:
+Autenticación (asegurar que el cajero esté autenticado)
+Gestión de Empleados (nombre, cédula y roles)
+5. Clientes
+Gestiona:
+Datos del Cliente (nombre, correo electrónico)
+Historial de Pedidos
+6. Movimientos de Stock (Entrantes y Salientes)
+Rastrea:
+Entrantes (ingredientes, cantidad y fecha de entrada)
+Salientes (ingredientes, cantidad y fecha de salida)
+Preocupaciones Transversales (reglas/limitaciones)
+Implementar reglas y validaciones globales como servicios que puedan interactuar con múltiples features, como:
+Chequeo de Disponibilidad de Stock (asegurarse de que haya suficientes ingredientes antes de vender)
+Autenticación del Cajero (validar que una venta no pueda ocurrir sin un cajero autenticado)
+Servicios de Reportes (manejar reportes como las ventas y utilidades diarias/semanales)
+Cada feature encapsularía su propia lógica de dominio, manteniendo el sistema modular y cumpliendo con los principios de la arquitectura hexagonal.
+	

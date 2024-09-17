@@ -1,0 +1,82 @@
+[
+  {
+    "id": "1",
+    "nombre": "Harina de trigo",
+    "medida": "kg",
+    "cantidad": "5",
+    "costo": "12000",
+    "categoria": "Granos"
+  },
+  {
+    "id": "2",
+    "nombre": "Azúcar",
+    "medida": "kg",
+    "cantidad": "2",
+    "costo": "8000",
+    "categoria": "Dulces"
+  },
+  {
+    "id": "3",
+    "nombre": "Leche",
+    "medida": "litro",
+    "cantidad": "3",
+    "costo": "6000",
+    "categoria": "Lácteos"
+  },
+  {
+    "id": "4",
+    "nombre": "Huevos",
+    "medida": "docena",
+    "cantidad": "1",
+    "costo": "5000",
+    "categoria": "Proteínas"
+  },
+  {
+    "id": "5",
+    "nombre": "Mantequilla",
+    "medida": "g",
+    "cantidad": "500",
+    "costo": "9000",
+    "categoria": "Grasas"
+  },
+  {
+    "id": "6",
+    "nombre": "Sal",
+    "medida": "kg",
+    "cantidad": "1",
+    "costo": "1000",
+    "categoria": "Condimentos"
+  },
+  {
+    "id": "7",
+    "nombre": "Polvo de hornear",
+    "medida": "g",
+    "cantidad": "100",
+    "costo": "1500",
+    "categoria": "Condimentos"
+  },
+  {
+    "id": "8",
+    "nombre": "Queso",
+    "medida": "kg",
+    "cantidad": "2",
+    "costo": "18000",
+    "categoria": "Lácteos"
+  },
+  {
+    "id": "9",
+    "nombre": "Aceite vegetal",
+    "medida": "litro",
+    "cantidad": "1",
+    "costo": "7000",
+    "categoria": "Grasas"
+  },
+  {
+    "id": "10",
+    "nombre": "Chocolate",
+    "medida": "barra",
+    "cantidad": "2",
+    "costo": "3500",
+    "categoria": "Dulces"
+  }
+]
