@@ -24,6 +24,7 @@ export class App {
     }
 
     private middlewares(middlewares?: any[]) {
+        this.app.use(express.json());
         middlewares?.forEach((middleware: any) => {
             this.app.use(middleware);
         });

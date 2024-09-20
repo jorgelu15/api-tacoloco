@@ -5,13 +5,19 @@ import { IngredienteRepositoryPort } from "../ports/ingrediente-repository.port"
 export class IngredienteRepositoryAdapter implements IngredienteRepositoryPort {
 
     private ingredientesRepository: IngredienteRepository[] = [];
-    constructor() {
-        this.initialize();
-    }
+    constructor() { }
 
     async getIngredientes(): Promise<IngredienteRepository[]> {
+        try {
+            const ingredientes = await Ingrediente.findAll();
+            this.ingredientesRepository = ingredientes.map((ingrediente) => ingrediente.toJSON());
+
+        } catch (err) {
+            console.error('Error al obtener ingredientes:', err);
+            this.ingredientesRepository = []; // O manejar el error de otra manera
+        }
         return Promise.resolve(this.ingredientesRepository);
-    } 
+    }
 
     async getIngredienteById(id: number): Promise<IngredienteRepository> {
         const ingrediente = this.ingredientesRepository.find((ingrediente: IngredienteRepository) => ingrediente.id === id)
@@ -20,15 +26,5 @@ export class IngredienteRepositoryAdapter implements IngredienteRepositoryPort {
         }
 
         return Promise.resolve(ingrediente);
-    }
-
-    async initialize() {
-        try {
-            const ingredientes = await Ingrediente.findAll();
-            this.ingredientesRepository = ingredientes.map((ingrediente) => ingrediente.toJSON());
-        } catch (err) {
-            console.error('Error al obtener ingredientes:', err);
-            this.ingredientesRepository = []; // O manejar el error de otra manera
-        }
     }
 }

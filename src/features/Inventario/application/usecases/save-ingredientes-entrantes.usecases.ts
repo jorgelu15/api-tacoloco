@@ -1,8 +1,10 @@
-import { IngredienteRepository } from "../../infrastructure/drivens/models/ingrediente-repository";
 import { EntrantesRepositoryPort } from "../../infrastructure/drivens/ports/entrantes-repository.port";
 export class SaveIngredientesEntrantesUseCase {
     constructor(private ingredienteRepository: EntrantesRepositoryPort) { }
 
-    async execute(ingrediente: IngredienteRepository) {
+    async execute(entrante: any) {
+        this.ingredienteRepository.saveIngrediente(entrante);
+
+        return 200;
     }
 }

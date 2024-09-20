@@ -1,8 +1,7 @@
-import { IngredienteRepository } from "../models/ingrediente-repository";
+import { EntranteRepository } from "../models/entrante-repository";
 
 export interface EntrantesRepositoryPort {
-    getIngredientes(): Promise<IngredienteRepository[]>;
-    getIngredienteById(id: number): Promise<IngredienteRepository>;
-    saveIngrediente(ingrediente: IngredienteRepository): void;
-    initialize(): Promise<void>;
+    getIngredientes(): Promise<EntranteRepository[]>;
+    getIngredienteById(id: number): Promise<EntranteRepository>;
+    saveIngrediente(ingrediente: EntranteRepository): void;
 }

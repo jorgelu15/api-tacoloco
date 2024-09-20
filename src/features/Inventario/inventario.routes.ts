@@ -6,6 +6,7 @@ import { GetIngredientesByIdUseCase } from "./application/usecases/get-ingredien
 import { GetEntrantesUseCase } from "./application/usecases/get-entrantes.usecases";
 import { EntranteRepositoryAdapter } from "./infrastructure/drivens/adapters/entrante-repository.adapter";
 import { IngredienteEntrantesApiAdapter } from "./infrastructure/drivers/adapters/ingredientes-entrantes-api.adapter";
+import { SaveIngredientesEntrantesUseCase } from "./application/usecases/save-ingredientes-entrantes.usecases";
 
 export class InvetarioRoutes {
 
@@ -18,9 +19,10 @@ export class InvetarioRoutes {
         const getIngredientesUseCase = new GetIngredientesUseCase(IngredientesRepositoryAdapter);
         const getIngredienteByIdUseCase = new GetIngredientesByIdUseCase(IngredientesRepositoryAdapter);
         const getEntrantesUseCase = new GetEntrantesUseCase(EntrantesRepositoryAdapter);
+        const saveIngredientesEntrantesUseCase = new SaveIngredientesEntrantesUseCase(EntrantesRepositoryAdapter);
 
         //drivers
         new IngredienteApiAdapter(this.app, getIngredientesUseCase, getIngredienteByIdUseCase);
-        new IngredienteEntrantesApiAdapter(this.app, getEntrantesUseCase);
+        new IngredienteEntrantesApiAdapter(this.app, getEntrantesUseCase, saveIngredientesEntrantesUseCase);
     }
 }
